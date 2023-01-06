@@ -161,13 +161,13 @@ li{
 }
 
 
-#button__resume{
+#resume-button-1{
     background-color: transparent;
     color: white;
     transition: 1s;
 }
 
-#button__resume:hover{
+#resume-button-1:hover{
     background-color: var(--first-color-alt);
     color:var(--body-color)
 }
