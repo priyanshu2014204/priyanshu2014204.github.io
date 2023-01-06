@@ -1,13 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Portfolio</title>
-</head>
-<body>
-    <div>Initial comment</div>>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Priyanshu portfolio</title>
+  </head>
+  <!-- Navbar : id="nav-menu"
+Home section : id="home"
+About section : id="about" class="about section"
+Skills section : id="skills"
+Projects section : id="projects"
+Contact section : id="contact" -->
+  <body>
+    <nav class="nav_menu" id="nav-menu">
+      <div class="Project-name"></div>
+      <ul>
+        <li class="nav-link home">Home</li>
+        <li class="nav-link about">About</li>
+        <li class="nav-link skills">skills</li>
+        <li class="nav-link project">Project</li>
+        <li class="nav-link contact">Contact</li>
+        <li class="nav-link resume" style="display: none;"></li>
+      </ul>
+    </nav>
+    <div class="contparent" id="home">
+      <div class="test_class">
+        <p>Hi Everyone I'm</p>
+        <h1 >Priyanshu <span class="dynamic_type"></span></h1>
+        <h1 class="brief_intro"></h1>
+        <p class="brief_thg" >
+          A aspiring Node js developer with a great knowledge of frontend who
+          loves to make projects that engage people
+        </p>
+        <div class="coffee">
+          <a id="button__resume">Resume</a>
+          <a href="#contact">Coffee with me</a>
+        </div>
+      </div>
+      <div class="org">
+        <div class="container">
+          <!-- <img src="image_6483441.JPG" class="obj" alt=""> -->
+          <img
+            src="https://raw.githubusercontent.com/meabhisingh/react-techystar/master/src/assets/2.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mouse">
+      <div>
+        <i class="bx bx-mouse" class="mouse__i" data-value="-3"></i>
+        <span class="scroll_type">Scroll down</span>
+      </div>
+    </div>
+    <div class="menu_parent">
+      <div href="#" class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active__link">
+              <i class="bx bx-home"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">
+              <i class="bx bx-user"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="bx bxs-book"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="bx bxs-briefcase"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              <i class="bx bx-comment-minus"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="feature">
+      <a href="https://www.linkedin.com/in/priyanshu-730049240/" class="">
+        <i class="bx bxl-linkedin-square"></i>
+      </a>
+      <a href="https://github.com/priyanshu2014204" class="">
+        <i class="bx bxl-github"></i>
+      </a>
+    </div>
+    <div id="about" >
+        <div class="about__head">
+           About me
+        </div >
+        <div class="about__intro" id="user-detail-name">
+          <div>
+            <!-- <div></div> -->
+            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, sint? Consequatur deserunt maxime voluptate mollitia nihil, adipisci cupiditate accusantium odio eius quam.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, sint? Consequatur deserunt maxime voluptate mollitia nihil, adipisci cupiditate accusantium odio eius quam.
+            </div>
+          </div>
+          <div id="user-detail-intro">
+            <img src="https://media.istockphoto.com/id/1033700106/photo/3d-illustration-background-of-jellyfish-jellyfish-swims-in-the-ocean-sea-light-passes-through.jpg?s=612x612&w=0&k=20&c=fmdrB6LirBN4kcNJu8EPEc4XX4Z9BvSlGh6qqoNyB7A=" alt="" class="home-png">
+          </div>
+        </div>
+    </div>
+
+
+    <section id="project">
+     <div class="project-card">
+      <img src="" alt="err">
+      <h1 class="project-title">abc</h1>
+      <p class="project-description">abc</p>
+      <p class="project-tech-stack">tech stack</p>
+      <a class="project-github-link" href="#">abc</a>
+      <a class="project-deployed-link" href="#">abc</a>
+     </div>
+    </section>
+
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    document.querySelector(".menu_parent").style.display = "none";
+    document.querySelector(".Project-name").innerText = "</Priyanshu>";
+    document.querySelector(".brief_intro").innerText = "</Brief>";
+    document.addEventListener("mousemove", para);
+    function para(e) {
+      // console.log(document.querySelectorAll(".obj"))
+      document.querySelectorAll(".bx-mouse").forEach((move) => {
+        let moving = move.getAttribute("data-value");
+        let x = (e.clientX * moving) / 200;
+        let Y = (e.clientY * moving) / 200;
+
+        move.style.transform =
+          "translateX(" + x + "px) translateY(" + Y + "px)";
+        // console.log(move.style)
+      });
+    }
+    function bordercreater() {
+      let a = window.scrollY;
+      if (a < 50) {
+        document.querySelector(".menu_parent").style.display = "none";
+        document.querySelector(".mouse").style.display = "none";
+      } else {
+        setTimeout(() => {
+          document.querySelector(".menu_parent").style.display = "flex";
+          document.querySelector(".mouse").style.display = "block";
+        }, 1000);
+      }
+    }
+    window.addEventListener("scroll", bordercreater);
+
+    setInterval(() => {
+      if (window.scrollY < 50 || window.scrollY == 0) {
+        document.querySelector(".menu_parent").style.display = "none";
+      }
+    }, 0);
+
+    let typing = new Typed(".dynamic_type", {
+      strings: ["Coder", "Developer", "Problem Solver"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      loop: true,
+    });
+  </script>
 </html>

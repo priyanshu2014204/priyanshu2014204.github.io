@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Major+Mono+Display&display=swap");
+
+:root {
+  --second-hue: 219;
+  --body-color: hsl(var(--second-hue), 48%, 8%);
+  --first-hue: 250;
+  --sat: 66%;
+  --lig: 75%;
+  --second-hue: 219;
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%)
+}
+body {
+  background-color: var(--body-color);
+  height: 200vh;
+}
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 105%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+nav {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 3vh;
+  backdrop-filter: blur(10px);
+  background-color: hsla(var(--second-hue), 32%, 16%, 0.8);
+
+}
+
+.Project-name {
+  font-weight: 400;
+  font-family: "Cedarville Cursive", cursive;
+}
+
+/* .container {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10rem 10rem 1rem 1rem;
+  width: 290px;
+  height: 490px;
+/* } */
+
+.container img {
+    animation: upto .5s linear infinite alternate;
+} 
+
+.feature{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    left: 30px;
+}
+
+.feature i{
+    color: var(--first-color);
+    transition: 0.3s;
+}
+
+.feature i:hover{
+    color: white;
+    transform: scale(2);
+    z-index: 20;
+}
+
+@keyframes upto{
+    from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-10px);
+      }
+}
+
+.contparent {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30vh;
+}
+.test_class {
+    /* height: 200px;
+    width: 100px; */
+    text-align: center;
+    width: 40%;
+  }
+.mouse {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+  margin: auto;
+}
+
+
+
+
+.mouse div {
+  text-align: center;
+}
+
+.mouse i {
+  color: grey;
+}
+.nav__menu {
+  position: fixed;
+  bottom: 1rem;
+  width: 70%;
+  border-radius: 4rem;
+  padding: 1rem 2.25rem;
+  backdrop-filter: blur(10px);
+  background-color: hsla(var(--second-hue), 32%, 16%, 0.8);
+}
+.nav__list{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.menu_parent{
+    display: flex;
+    justify-content: center;
+}
+
+.brief_intro{
+    color: red;
+    font-family: "Cedarville Cursive", cursive;
+}
+
+li{
+    list-style: none;
+}
+
+.Project-name+ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.coffee a{
+    position: relative;
+    top: 20px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 1px solid var(--first-color-alt);
+    padding: 8px;
+    color: var(--body-color);
+    background-color: var(--first-color);
+}
+
+
+#button__resume{
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+}
+
+#button__resume:hover{
+    background-color: var(--first-color-alt);
+    color:var(--body-color)
+}
+
+
+#about{
+  width: 80%;
+  background-color: white;
+margin: auto;
+  height: 60vh;
+  color: black;
+  padding: 15px 30px 15px 30px ;
+  border-radius:  200px 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__head{
+  position: relative;
+  top: 0px;
+}
+
+#about div{
+  color: black;
+}
+
+#about img{
+  width: 10%;
+}
+
+.about__intro{
+  display: flex;
+}
