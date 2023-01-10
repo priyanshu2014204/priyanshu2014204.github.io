@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Major+Mono+Display&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Major+Mono+Display&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Major+Mono+Display&family=Poppins&display=swap');
 
 :root {
   --second-hue: 219;
@@ -8,19 +9,29 @@
   --lig: 75%;
   --second-hue: 219;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%)
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
+  --body-font: 'Poppins', sans-serif;
+  --container-color: hsl(var(--second-hue), 32%, 12%);
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
 }
 body {
   background-color: var(--body-color);
-  height: 200vh;
+  height: 500vh;
 }
 * {
   padding: 0;
   margin: 0;
   color: white;
   font-size: 105%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -30,7 +41,7 @@ nav {
   justify-content: space-between;
   padding-left: 3vh;
   backdrop-filter: blur(10px);
-  background-color: hsla(var(--second-hue), 32%, 16%, 0.8);
+  /* background-color: hsla(var(--second-hue), 32%, 16%, 0.8); */
 
 }
 
@@ -55,11 +66,20 @@ nav {
 } 
 
 .feature{
-    position: absolute;
+    position: fixed;
     bottom: 50px;
     display: flex;
     flex-direction: column;
     left: 30px;
+}
+.feature::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    background-color: #a395e9;
+    position: sticky;
+    left: 40px;
 }
 
 .feature i{
@@ -91,9 +111,26 @@ nav {
 .test_class {
     /* height: 200px;
     width: 100px; */
-    text-align: center;
+    text-align: left;
     width: 40%;
+    margin-top: 10vh;
+}
+
+
+.test_class>h1:nth-child(2){
+    font-size: 200%;
+    margin-top: 2vh;
+    color: grey;
   }
+
+
+.test_class>p{
+    font-size: 150%;
+    margin-top: 2vh;
+    color: #ccd6f6;
+  }
+
+
 .mouse {
   position: fixed;
   bottom: 40px;
@@ -117,8 +154,8 @@ nav {
   width: 70%;
   border-radius: 4rem;
   padding: 1rem 2.25rem;
-  backdrop-filter: blur(10px);
-  background-color: hsla(var(--second-hue), 32%, 16%, 0.8);
+  backdrop-filter:blur(10px);
+  /* background-color: hsla(var(--second-hue), 32%, 16%, 0.8); */
 }
 .nav__list{
     display: flex;
@@ -132,7 +169,7 @@ nav {
 }
 
 .brief_intro{
-    color: red;
+    color:#ccd6f6;
     font-family: "Cedarville Cursive", cursive;
 }
 
@@ -148,11 +185,11 @@ li{
 
 .coffee a{
     position: relative;
-    top: 20px;
+    top: 30px;
     text-decoration: none;
     border: none;
     outline: none;
-    border-radius: 0.5rem;
+    border-radius:6px;
     cursor: pointer;
     border: 1px solid var(--first-color-alt);
     padding: 8px;
@@ -173,32 +210,136 @@ li{
 }
 
 
+/* 
+
 #about{
   width: 80%;
   background-color: white;
-margin: auto;
+  margin: auto;
   height: 60vh;
   color: black;
   padding: 15px 30px 15px 30px ;
-  border-radius:  200px 200px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .about__head{
+  text-align: center;
+  font-family: cursive;
+  color: #a395e9;
   position: relative;
-  top: 0px;
+  top: -6rem;
+  font-size: 200%;
 }
 
 #about div{
   color: black;
 }
 
-#about img{
-  width: 10%;
-}
+
 
 .about__intro{
-  display: flex;
+  display: grid;
+  color: black;
+  grid-template-columns:2fr 1fr;
+}
+
+.about__intro p{
+  color: black;
+  text-align: justify;
+ 
+}
+
+.about__intro>div:last-child{
+  text-align: center;
+}
+
+.about__intro img{
+  width: 70%;
+  border-radius: 50%;
+} */
+
+.about__container{
+  row-gap: 2.5rem;
+}
+
+
+.about__img{
+  width: 220px;
+  border-radius: 1.5rem;
+  justify-self: center;
+}
+
+.about__data{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.about__info{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: .5rem;
+  margin-bottom: 2rem;
+}
+
+.about__box{
+  background-color: var(--container-color);
+  border-radius: .75rem;
+  padding: .75rem .5rem;
+}
+
+.section__title, 
+.section__subtitle {
+  display: block;
+  text-align: center;
+}
+
+.about__icon{
+  font-size: 1.5rem;
+  color: var(--first-color);
+  margin-bottom: .5rem;
+}
+
+.about__title{
+  font-size: var(--small-font-size);
+}
+.about__subtitle{
+  font-size: var(--tiny-font-size);
+}
+
+.about__description{
+margin-bottom: 2rem;
+}
+
+.button{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .4s;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+
+.horizon{
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 90%;
+  border: none;
+  height: 1px;
+  background-color: #a395e9;
 }
