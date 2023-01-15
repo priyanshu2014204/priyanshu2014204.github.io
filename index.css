@@ -34,6 +34,14 @@ body {
   scroll-behavior: smooth;
 }
 
+li{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
 nav {
   display: flex;
   height: 70px;
@@ -105,8 +113,14 @@ nav {
 .contparent {
   margin-top: 2rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
   margin-bottom: 30vh;
+  /* background-image: url("https://i.pinimg.com/originals/79/a3/84/79a384c3c449ad01b0e57e790807b2c0.gif");
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  width: 100%;
+  background-size: 70%;
+  height: 60vh; */
 }
 .test_class {
     /* height: 200px;
@@ -308,6 +322,10 @@ li{
 }
 .about__subtitle{
   font-size: var(--tiny-font-size);
+}
+
+.about__box:hover{
+  background-color: var(--first-color);
 }
 
 .about__description{
