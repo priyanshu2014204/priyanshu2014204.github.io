@@ -9,11 +9,23 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
+		/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>Priyanshu portfolio</title>
   </head>
   <body>
+
+    <div id="circle" class="circle"></div>
+<!-- above this the code value is absolute -->
+
     <nav class="nav_menu" id="nav-menu">
-      <div class="Project-name"></div>
+      <div class="Project-name animate__hinge"></div>
       <ul>
         <li class="nav-link home"><a href="#home">Home</a></li>
         <li class="nav-link about"><a href="#about">About</a></li>
@@ -23,7 +35,7 @@
         <li class="nav-link resume" style="display: none;"></li>
       </ul>
     </nav>
-    <div class="contparent" id="home">
+    <div class="contparent " id="home">
       <div class="test_class">
         <p style="color: #a395e9;">Hi Everyone I'm</p>
         <h1 >Priyanshu</h1>
@@ -42,6 +54,7 @@
           <img
             src="https://raw.githubusercontent.com/meabhisingh/react-techystar/master/src/assets/2.webp"
             alt="not working"
+            class=""
           />
           <!-- <img src="https://i.pinimg.com/originals/79/a3/84/79a384c3c449ad01b0e57e790807b2c0.gif" alt=""> -->
         </div>
@@ -177,6 +190,7 @@
 
   </body>
   <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
+  <script src="https://unpkg.com/kinet@2.2.1/dist/kinet.min.js"></script>
   <script>
     document.querySelector(".menu_parent").style.display = "none";
     document.querySelector(".Project-name").innerText = "</Priyanshu>";
@@ -216,5 +230,42 @@
     }, 0);
 
    
+
+// cursor effect
+
+var kinet = new Kinet({
+            acceleration: 0.06,
+            friction: 0.20,
+            names: ["x", "y"],
+        });
+
+        // select circle element
+        var circle = document.getElementById('circle');
+
+        // set handler on kinet tick event
+        kinet.on('tick', function(instances) {
+            circle.style.transform = `translate3d(${ (instances.x.current) }px, ${ (instances.y.current) }px, 0) rotateX(${ (instances.x.velocity/2) }deg) rotateY(${ (instances.y.velocity/2) }deg)`;
+        });
+
+        // call kinet animate method on mousemove
+        document.addEventListener('mousemove', function (event) {
+            kinet.animate('x', event.clientX - window.innerWidth/2);
+            kinet.animate('y', event.clientY - window.innerHeight/2);
+        });
+
+
+
+
+        // log
+        kinet.on('start', function() {
+            console.log('start');
+        });
+
+        kinet.on('end', function() {
+            console.log('end');
+        });
+
+// cursor effect ended
+
   </script>
 </html>
