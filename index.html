@@ -9,36 +9,40 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/mocassin.css" />
     <link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
-		/>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
+    />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Priyanshu portfolio</title>
   </head>
   <body>
-
     <div id="circle" class="circle"></div>
-<!-- above this the code value is absolute -->
+    <!-- above this the code value is absolute -->
 
     <nav class="nav_menu" id="nav-menu">
       <div class="Project-name animate__hinge"></div>
       <ul>
         <li class="nav-link home"><a href="#home">Home</a></li>
         <li class="nav-link about"><a href="#about">About</a></li>
-        <li class="nav-link skills"><a href="">skills</a></li>
-        <li class="nav-link project">Project</li>
-        <li class="nav-link contact">Contact</li>
-        <li class="nav-link resume" style="display: none;"></li>
+        <li class="nav-link skills"><a href="#skills">skills</a></li>
+        <li class="nav-link project">
+          <a href="#project">Project</a>
+        </li>
+        <li class="nav-link contact">
+          <a href="#contact">Contact</a>
+        </li>
+        <li class="nav-link resume" style="display: none"></li>
       </ul>
     </nav>
-    <div class="contparent " id="home">
+    <div class="contparent" id="home">
       <div class="test_class">
-        <p style="color: #a395e9;">Hi Everyone I'm</p>
-        <h1 >Priyanshu</h1>
+        <p style="color: #a395e9">Hi Everyone I'm</p>
+        <h1>Priyanshu</h1>
         <h1 class="brief_intro"></h1>
         <p class="brief_thg">
           A aspiring Node js developer with a great knowledge of frontend who
@@ -108,8 +112,8 @@
 
       </div> -->
     </ul>
-    <section id="about" class="about section" >
-      <hr class="horizon">
+    <section id="about" class="about section">
+      <hr class="horizon" />
       <span class="section__subtitle"> My Intro </span>
       <h2 class="section__title">About me</h2>
       <div class="about__container containers grid">
@@ -138,57 +142,238 @@
       </div>
     </section>
 
-
-    <!-- <section id="project">
-     <div class="project-card">
-      <img src="" alt="err">
-      <h1 class="project-title">abc</h1>
-      <p class="project-description">abc</p>
-      <p class="project-tech-stack">tech stack</p>
-      <a class="project-github-link" href="#">abc</a>
-      <a class="project-deployed-link" href="#">abc</a>
-     </div>
-     <div class="project-card">
-      <img src="" alt="err">
-      <h1 class="project-title">abc</h1>
-      <p class="project-description">abc</p>
-      <p class="project-tech-stack">tech stack</p>
-      <a class="project-github-link" href="#">abc</a>
-      <a class="project-deployed-link" href="#">abc</a>
-     </div>
-     <div class="project-card">
-      <img src="" alt="err">
-      <h1 class="project-title">abc</h1>
-      <p class="project-description">abc</p>
-      <p class="project-tech-stack">tech stack</p>
-      <a class="project-github-link" href="#">abc</a>
-      <a class="project-deployed-link" href="#">abc</a>
-     </div>
-     <div class="project-card">
-      <img src="" alt="err">
-      <h1 class="project-title">abc</h1>
-      <p class="project-description">abc</p>
-      <p class="project-tech-stack">tech stack</p>
-      <a class="project-github-link" href="#">abc</a>
-      <a class="project-deployed-link" href="#">abc</a>
-     </div>
+    <section id="project">
+      <h1 class="section__subtitle">Projects</h1>
+      <h2 class="section__title">Recent Work</h2>
+      <div class="Work_filter">
+        <span data-filter="all" class="active project_item">All</span>
+        <span data-filter=".frontend" class="project_item">Frontend</span>
+        <span data-filter=".backend" class="project_item">Backend</span>
+      </div>
+      <div class="project_parent">
+        <div class="project-card mix frontend">
+          <div class="mc-item mc-item--slideInUpBig-zoomIn">
+            <img src="./img/lystpic.png" alt="err" class="mc-item__image" />
+            <div class="mc-item__caption">
+              <p class="project-description">hello hey check</p>
+              <p class="project-tech-stack">Demo 123</p>
+            </div>
+          </div>
+          <h2 class="project-title">Lyst Clone</h2>
+          <div class="project_flex">
+            <a class="project-github-link" href="#">
+              Github
+              <i class="bx bxl-github project_i"></i>
+            </a>
+            <a class="project-deployed-link" href="#">
+              Demo
+              <i class="bx bx-right-arrow-alt project_i"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-card mix backend">
+          <div class="mc-item mc-item--slideInUpBig-zoomIn">
+            <img src="./img/travelpro.png" alt="err" class="mc-item__image" />
+            <div class="mc-item__caption">
+              <p class="project-description">hello hey check</p>
+              <p class="project-tech-stack">Demo 123</p>
+            </div>
+          </div>
+          <h2 class="project-title">Travel Pro</h2>
+          <div class="project_flex">
+            <a class="project-github-link" href="#">
+              Github
+              <i class="bx bxl-github project_i"></i>
+            </a>
+            <a class="project-deployed-link" href="#">
+              Demo
+              <i class="bx bx-right-arrow-alt project_i"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-card mix backend">
+          <div class="mc-item mc-item--zoomOutUp">
+            <img src="./img/lystpic.png" alt="err" class="mc-item__image" />
+            <div class="mc-item__caption">
+              <p class="project-description">hello hey check</p>
+              <p class="project-tech-stack">Demo 123</p>
+            </div>
+          </div>
+          <h2 class="project-title">Travel Pro</h2>
+          <div class="project_flex">
+            <a class="project-github-link" href="#">
+              Github
+              <i class="bx bxl-github project_i"></i>
+            </a>
+            <a class="project-deployed-link" href="#">
+              Demo
+              <i class="bx bx-right-arrow-alt project_i"></i>
+            </a>
+          </div>
+        </div>
+        <div class="project-card mix backend">
+          <div class="mc-item mc-item--zoomOutUp">
+            <img src="./img/lystpic.png" alt="err" class="mc-item__image" />
+            <div class="mc-item__caption">
+              <p class="project-description">hello hey check</p>
+              <p class="project-tech-stack">Demo 123</p>
+            </div>
+          </div>
+          <h2 class="project-title">Travel Pro</h2>
+          <div class="project_flex">
+            <a class="project-github-link" href="#">
+              Github
+              <i class="bx bxl-github project_i"></i>
+            </a>
+            <a class="project-deployed-link" href="#">
+              Demo
+              <i class="bx bx-right-arrow-alt project_i"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
-
     <section id="skills">
+      <h1 class="section__title">My Skills</h1>
+      <hr class="horizon" />
+
+      <div class="skills_parent">
         <div class="skills-card">
-            <img src="" class="skills card-img" alt="">
-            <p class="skills-card-name"></p>
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
+            class="skills card-img"
+            alt=""
+          />
+          <p class="skills-card-name"></p>
         </div>
         <div class="skills-card">
-            <img src="" class="skills card-img" alt="">
-            <p class="skills-card-name"></p>
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            class="skills card-img"
+            alt=""
+          />
+          <p class="skills-card-name"></p>
         </div>
-    </section> -->
+        <div class="skills-card">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+            class="skills card-img"
+            alt=""
+          />
+          <p class="skills-card-name"></p>
+        </div>
+        <div class="skills-card">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+            class="skills card-img"
+            alt=""
+          />
+          <p class="skills-card-name"></p>
+        </div>
+        <div class="skills-card">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+            class="skills card-img"
+            alt=""
+          />
+          <p class="skills-card-name"></p>
+        </div>
+        <div class="skills-card">
+          <img
+            src="https://profilinator.rishav.dev/skills-assets/nestjs.svg"
+            class="skills card-img"
+            alt=""
+          />
+          <p class="skills-card-name"></p>
+        </div>
+        <div class="skills-card">
+          <img
+            src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg"
+            class="skills card-img"
+            alt=""
+          />
+          <p class="skills-card-name"></p>
+        </div>
+        <div class="skills-card">
+          <img
+            src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg"
+            class="skills card-img"
+            alt=""
+          />
+          <p class="skills-card-name"></p>
+        </div>
+        <div class="skills-card">
+          <img
+            src="https://avatars.githubusercontent.com/u/1529926?s=280&v=4"
+            class="skills card-img"
+            alt=""
+          />
+          <p class="skills-card-name"></p>
+        </div>
+      </div>
+    </section>
 
+    <section class="contact-me-banner" id="contact">
+      <h1 class="section__subtitle coffee_title">Let's have a <i class='bx bxs-coffee-alt'></i>
+        with me
+      </h1>
+      
+      <div class="main_contact">
+        <div class="coffee_cup">
+          <!-- <img
+            src="https://raw.githubusercontent.com/chaoocharles/coffee-shop-web-page/main/cup_of_coffee.png"
+            alt=""
+          /> -->
+          <img src="https://freepngimg.com/thumb/starbucks/77325-frappuccino-drink-chocolate-starbucks-matcha-white.png" alt="">
+        </div>
+        <div class="contact_me_form">
+             <h2 class="section__title">
+              Connect with me
+             </h2>
 
+            <div class="conatact_align">
+              <div class="">
+                <div>
+                  <i class='bx bxl-whatsapp'></i>
+                  <span>+91 9971542816 <i class='bx bx-right-arrow-alt' ></i>
+                  </span>
+                </div>
+                <div>
+                  <i class='bx bxl-gmail' id="abc" ></i>
+                  <span class="gmail_small">priyanshu2014204@gmail.com
+                    <i class='bx bx-right-arrow-alt' ></i>
+                  </span>
 
+                </div>
+                <div>
+                  <i class='bx bxl-linkedin' id="linkdein" ></i>
+                  <span>Priyanshu .
+                    <i class='bx bx-right-arrow-alt' ></i>
+                  </span>
+                </div>
+              </div>
+              <!-- <form action="" class="real_contact_form">
+                <div>
+                  <label for="name" class="name_label">Name</label>
+                  <input type="text" name="" id="" placeholder="What's your name">
+                </div>
+                <div>
+                  <label for="name" class="email_label">Email</label>
+                  <input type="text" name="" id="" placeholder="What's your name">
+                </div>
+                <div>
+                  <label for="name" class="des_label">Tell About Your Idea</label>
+                  <textarea name="" id="" cols="30" rows="6"></textarea>
+                </div>
+               </form> -->
+            </div>
+        </div>
+      </div>
+     
+    </section>
   </body>
+  <script src="./js/mixitup.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
   <script src="https://unpkg.com/kinet@2.2.1/dist/kinet.min.js"></script>
   <script>
@@ -218,7 +403,6 @@
         setTimeout(() => {
           document.querySelector(".menu_parent").style.display = "flex";
         }, 1000);
-        
       }
     }
     window.addEventListener("scroll", bordercreater);
@@ -229,43 +413,58 @@
       }
     }, 0);
 
-   
+    // cursor effect
 
-// cursor effect
+    var kinet = new Kinet({
+      acceleration: 0.06,
+      friction: 0.2,
+      names: ["x", "y"],
+    });
 
-var kinet = new Kinet({
-            acceleration: 0.06,
-            friction: 0.20,
-            names: ["x", "y"],
-        });
+    // select circle element
+    var circle = document.getElementById("circle");
 
-        // select circle element
-        var circle = document.getElementById('circle');
+    // set handler on kinet tick event
+    kinet.on("tick", function (instances) {
+      circle.style.transform = `translate3d(${instances.x.current}px, ${
+        instances.y.current
+      }px, 0) rotateX(${instances.x.velocity / 2}deg) rotateY(${
+        instances.y.velocity / 2
+      }deg)`;
+    });
 
-        // set handler on kinet tick event
-        kinet.on('tick', function(instances) {
-            circle.style.transform = `translate3d(${ (instances.x.current) }px, ${ (instances.y.current) }px, 0) rotateX(${ (instances.x.velocity/2) }deg) rotateY(${ (instances.y.velocity/2) }deg)`;
-        });
+    // call kinet animate method on mousemove
+    document.addEventListener("mousemove", function (event) {
+      kinet.animate("x", event.clientX - window.innerWidth / 2);
+      kinet.animate("y", event.clientY - window.innerHeight / 2);
+    });
 
-        // call kinet animate method on mousemove
-        document.addEventListener('mousemove', function (event) {
-            kinet.animate('x', event.clientX - window.innerWidth/2);
-            kinet.animate('y', event.clientY - window.innerHeight/2);
-        });
+    // log
+    kinet.on("start", function () {});
 
+    kinet.on("end", function () {});
 
+    let mixer = mixitup(".project_parent", {
+      selectors: {
+        target: ".project-card",
+      },
+      animation: {
+        duration: 300,
+      },
+    });
 
+    let actlink = document.querySelectorAll(".project_item");
 
-        // log
-        kinet.on('start', function() {
-            console.log('start');
-        });
+    function actwork() {
+      actlink.forEach((el) => {
+        el.classList.remove("active");
+        this.classList.add("active");
+      });
+    }
 
-        kinet.on('end', function() {
-            console.log('end');
-        });
+    actlink.forEach((el) => el.addEventListener("click", actwork));
 
-// cursor effect ended
-
+    // console.log(mixer)
+    // cursor effect ended
   </script>
 </html>
