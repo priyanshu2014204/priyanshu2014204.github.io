@@ -313,6 +313,69 @@
         </div>
       </div>
     </section>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <!-- <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a> -->
+      <div class="inside_nav">
+        <input type="text" placeholder="Request your query here">
+        <br>
+        <button>send me</button>
+      </div>
+    </div>
+
+    <section class="general">
+      <h2 class="section__title">Just for fun</h2>
+      <div class="slideshow-container">
+          
+           
+        <div class="mySlides fade">
+         <div class="slide_one">
+        <div>
+          <p class="joke_head">One mind boosting joke</p>
+          <p class="joke_setup"></p>
+          <p class="joke"></p>
+          <button class="ref_joke" onclick="makeajoke()">New joke
+            <i class='bx bx-refresh'></i>
+          </button>
+        </div>
+         </div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="slide_one">  
+            <div>
+              <p>Have a Query for me </p>
+              <button class="opendrawer">Send anonymously</button>
+            </div>
+            
+            <!-- <h2>Animated Sidenav Example</h2>
+            <p>Click on the element below to open the side navigation menu.</p> -->
+            <!-- <span style="font-size:30px;cursor:pointer" class="opendrawer">&#9776; open</span> -->
+          </div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="slide_one">  
+            <div>hello2</div>
+            </div>
+        </div>
+        
+        <a class="prev">❮</a>
+        <a class="next">❯</a>
+        
+        </div>
+
+      
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>  
+    </section>
+
 
     <section class="contact-me-banner" id="contact">
       <h1 class="section__subtitle coffee_title">Let's have a <i class='bx bxs-coffee-alt'></i>
@@ -321,6 +384,11 @@
       
       <div class="main_contact">
         <div class="coffee_cup">
+          <!-- <div class="coffe_intro">
+            <p>Coffee</p>
+            <p>With</p>
+            <p>Code</p>
+          </div> -->
           <!-- <img
             src="https://raw.githubusercontent.com/chaoocharles/coffee-shop-web-page/main/cup_of_coffee.png"
             alt=""
@@ -333,10 +401,12 @@
              </h2>
 
             <div class="conatact_align">
-              <div class="">
+              <!-- <div class="">
                 <div>
                   <i class='bx bxl-whatsapp'></i>
-                  <span>+91 9971542816 <i class='bx bx-right-arrow-alt' ></i>
+                  <span><p>
+                    +91 9971542816
+                  </p> <i class='bx bx-right-arrow-alt' ></i>
                   </span>
                 </div>
                 <div>
@@ -348,31 +418,43 @@
                 </div>
                 <div>
                   <i class='bx bxl-linkedin' id="linkdein" ></i>
-                  <span>Priyanshu .
+                  <span>
+                    Priyanshu
                     <i class='bx bx-right-arrow-alt' ></i>
                   </span>
                 </div>
-              </div>
-              <!-- <form action="" class="real_contact_form">
-                <div>
-                  <label for="name" class="name_label">Name</label>
-                  <input type="text" name="" id="" placeholder="What's your name">
+              </div> -->
+              <form action="" class="real_contact_form">
+                <div class="form_head">Send Your message
+   <img src="https://www.pngall.com/wp-content/uploads/2/Rocket-PNG-File-Download-Free.png" alt="">
+
                 </div>
                 <div>
-                  <label for="name" class="email_label">Email</label>
-                  <input type="text" name="" id="" placeholder="What's your name">
+                  <!-- <label for="name" class="name_label">Name</label> -->
+                  <!-- <label for="" class=""></label> -->
+                  <input type="text" name="" id="" placeholder="name*">
+                </div>
+                <div>
+                  <!-- <label for="name" class="email_label">Email</label> -->
+                  <input type="text" name="" id="" placeholder="email*">
                 </div>
                 <div>
                   <label for="name" class="des_label">Tell About Your Idea</label>
                   <textarea name="" id="" cols="30" rows="6"></textarea>
                 </div>
-               </form> -->
+                <div class="contact_button">
+                  <button>Send Your message</button>
+                </div>
+               </form>
             </div>
         </div>
       </div>
      
     </section>
+    
   </body>
+  <script src="index.js"></script>
+  <!-- <script src="//code.tidio.co/zax7zljhfwd8rppylxugzgu2rziaaixs.js" async></script> -->
   <script src="./js/mixitup.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
   <script src="https://unpkg.com/kinet@2.2.1/dist/kinet.min.js"></script>
@@ -455,6 +537,7 @@
 
     let actlink = document.querySelectorAll(".project_item");
 
+
     function actwork() {
       actlink.forEach((el) => {
         el.classList.remove("active");
@@ -464,6 +547,36 @@
 
     actlink.forEach((el) => el.addEventListener("click", actwork));
 
+    document.querySelector(".prev").addEventListener("click",()=>{plusSlides(-1)})
+    document.querySelector(".next").addEventListener("click",()=>{plusSlides(1)})
+
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  console.log("hellow")
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" indicator", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " indicator";
+}
     // console.log(mixer)
     // cursor effect ended
   </script>

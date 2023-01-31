@@ -23,7 +23,7 @@
 }
 body {
   background-color: var(--body-color);
-  height: 500vh;
+  overflow-x: hidden;
 }
 * {
   padding: 0;
@@ -599,14 +599,38 @@ filter: blur(0.75px);
   height: 390px;
   width: 390px;
       /* background: linear-gradient(180deg, hsla( var(--first-hue), var(--sat), var(--lig),1), hsla(var(--first-hue),var(--sat),var(--lig),.8) ); */
-      background-color: #1e3932;
-    box-shadow: 0 0 16px hsla(var(--first-hue),var(--sat),var(--lig),.4);
+      /* background-color: #1e3932;
+    box-shadow: 0 0 16px hsla(var(--first-hue),var(--sat),var(--lig),.4); */
     animation-name: rotate;
     animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
 }
+
+/* .coffe_intro{
+  position: relative;
+  top: 50px;
+} */
+
+.coffe_intro p{
+  font-size: 250%;
+}
+
+
+.coffe_intro p:last-child{
+position: relative;
+z-index: 1000000;
+bottom: -13px;
+justify-content: end;
+}
+
+.coffe_intro p:first-child{
+position: relative;
+
+left: 11px;
+}
+
 
 /* @keyframes rotate{
   from{ transform: rotate(-360deg); }
@@ -618,8 +642,8 @@ filter: blur(0.75px);
   /* top: -187px;
   left: -44px; */
 
-  top: 48px;
-  left: -5px;
+  /* top: -208px; */
+  left: -15px;
   animation: upto .5s linear infinite alternate;
   width: 65%;
   /* position: sticky; */
@@ -710,6 +734,18 @@ filter: blur(0.75px);
   top: -10px;
   color:black;
 }
+.conatact_align span p{
+  color: black;
+  /* line-height: normal;
+  display: inline-block;
+  vertical-align: middle; */
+}
+
+.conatact_align span div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .conatact_align span>i{
   color: black;
@@ -736,35 +772,231 @@ filter: blur(0.75px);
 label{
   color: black;
   font-size: var(--normal-font-size);
-  position: absolute;
+  position: relative;
   /* display: none; */
   opacity: 1000;
-  left: 200px;
+  /* left: 200px; */
   background-color: white;
   
 }
 
-.name_label{
-  top: 260px;
-
-  /* padding: .1rem; */
+.form_head{
+  color: black;
+  position: relative;
+  font-weight: 700;
+  top: -15px;
+}
+.form_head img{
+  width: 38px;
 }
 
-.email_label{
-  top: 330px;
+.contact_button button{
+  background-color: #a395e9;
+  padding: 0.5rem;
+  margin-left: 8px;
+  font-size: var(--normal-font-size);
+  border-radius: 6px;
+  font-weight: 700;
 }
 
 .des_label{
-top: 395px;
+ top: 0px;
+}
+
+.general{
+  margin-bottom: 100px;
 }
 
 .real_contact_form input,.real_contact_form textarea{
   width: 100%;
   border-radius: .25rem;
   margin-bottom: 2rem;
+
   /* border: 1px solid; */
-  border-color: gold;
+  border-color: #f7f6fe;
   font-size: var(--small-font-size);
   padding: .25rem;
   color: black;
+}
+textarea{
+  border: 1px solid black !important;
+}
+
+.real_contact_form input{
+  height: 1.3rem;
+  padding: 0.5rem;
+}
+
+
+/* slider */
+
+.slideshow-container {
+  
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+
+
+/* Number text (1/3 etc) */
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.indicator, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.slide_one{
+  margin: auto;
+  width: 70%; 
+  background-color: var(--body-color);
+  height: 420px;
+  color: black;
+  border-radius: 2rem;
+  display: grid;
+  padding: 4rem 2rem;
+  place-items: center;
+}
+
+
+.slide_one>div{
+  width: 60%;
+  background-color:var(--first-color);
+  padding: 4rem 2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+}
+
+.joke_head{
+  position: relative;
+  top: -3vh;
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+  color: black;
+  font-weight: bold;
+}
+
+.bx-refresh{
+  transition: transform .7s ease-in-out;
+}
+
+.slide_one button:hover  .bx-refresh{
+  /* color: blue; */
+  transform: rotate(180deg);
+}
+
+/* .slide_one>div p{
+  color: black;
+} */
+
+.slide_one>div button{
+  margin-top: 30px;
+  padding: 0.5rem;
+  background-color: var(--body-color);
+  border-radius: 0.7rem;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: WHITE;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.inside_nav{
+  border: 2px solid red;
+  background-color: #f4e1d7;
+  width: 70%;
+  border-radius: 4%;
+  margin: auto;
+}
+
+.inside_nav input{
+  background-color:#f4e1d7 ;
+  border:0px;
+  border-bottom: 1px solid #d05512;
+
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
