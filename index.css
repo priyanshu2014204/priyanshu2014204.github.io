@@ -34,6 +34,10 @@ body {
   scroll-behavior: smooth;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 li{
   cursor: pointer;
 }
