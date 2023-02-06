@@ -23,7 +23,8 @@
 }
 body {
   background-color: var(--body-color);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+ 
 }
 * {
   padding: 0;
@@ -829,6 +830,7 @@ textarea{
 .real_contact_form input{
   height: 1.3rem;
   padding: 0.5rem;
+  width: 95%;
 }
 
 
@@ -1003,4 +1005,34 @@ textarea{
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+
+
+
+.contact_img{
+  position: absolute;
+  right: -10%;
+  text-align: end;
+  bottom: 1%;
+}
+
+.contact_img img{
+  width: 25%;
+}
+
+
+.calendar{
+  width: 70%;
+  margin: auto;
+}
+
+.github_stats>h1{
+  text-align: center;
+  margin-bottom: 125px;
+  font-size: var(--h1-font-size);
+}
+.github_stats{
+  margin-bottom: 250px;
+  margin-top: 125px;
 }

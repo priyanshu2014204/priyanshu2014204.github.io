@@ -35,3 +35,7 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0px";
   }
+
+  GitHubCalendar(".calendar", "priyanshu2014204");
+  // or enable responsive functionality
+  GitHubCalendar(".calendar", "priyanshu2014204", { responsive: true });
