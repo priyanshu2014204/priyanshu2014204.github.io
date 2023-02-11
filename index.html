@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="description" content="Hey developers thanks for checking out my portfolio I'm aa young develpoer from india have  great knowledge of frontend - and backend both have an experience of more than 8 months in backend devlopment Here you can see my all the projects that I've made so far and you can give recommendation as well">
+
+   <meta name="keyword" content="
+   Priyanshu porfolio,
+   priyanshu poddar,
+   priyanshu p,
+   priyanshu bisht,
+   priyanshu chaturvedi,
+   priyanshu gupta,
+   priyanshu gaurav,
+   priyanshu pundir,
+   priyanshu pareek,
+   priyanshu kashyap,
+   priyanshu priya,
+   priyanshu priyadarshi,
+   priyanshu priyam,
+   priyanshu poet,
+   priyanshu uttam,
+   priyanshu varshney,
+   priyanshu vlogs,
+   pawan poddar net worth,
+   chandan poddar review,
+   poddar pigments owner,
+   priyanshu prasad
+   ">
+
+   <meta name="author" content="Priyanshu">
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,6 +50,7 @@
    rel="stylesheet"
    href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
 />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Priyanshu portfolio</title>
   </head>
@@ -35,6 +64,7 @@
         <li class="nav-link home"><a href="#home">Home</a></li>
         <li class="nav-link about"><a href="#about">About</a></li>
         <li class="nav-link skills"><a href="#skills">skills</a></li>
+        <li class="nav-link skills"><a href="#skills">Resume</a></li>
         <li class="nav-link project">
           <a href="#project">Project</a>
         </li>
@@ -68,6 +98,7 @@
           <!-- <img src="https://i.pinimg.com/originals/79/a3/84/79a384c3c449ad01b0e57e790807b2c0.gif" alt=""> -->
         </div>
       </div>
+      <!-- <div class="home_color" data-aos="fade-in"></div> -->
     </div>
     <div class="mouse">
       <div>
@@ -106,23 +137,15 @@
         </ul>
       </div>
     </div>
-    <ul class="feature">
-      <li href="https://www.linkedin.com/in/priyanshu-730049240/" class="">
-        <i class="bx bxl-linkedin-square"></i>
-      </li>
-      <li href="https://github.com/priyanshu2014204" class="">
-        <i class="bx bxl-github"></i>
-      </li>
-      <!-- <div style="border: 1px solid;height: 90px;width: 1px;">
-
-      </div> -->
-    </ul>
+  
     <section id="about" class="about section">
       <hr class="horizon" />
-      <span class="section__subtitle"> My Intro </span>
-      <h2 class="section__title">About me</h2>
+      <span class="section__subtitle"> About me </span>
+      <!-- <h2 class="section__title">About me</h2> -->
       <div class="about__container containers grid">
-        <img src="img/IMG-9010.jpg" alt="" class="about__img" />
+       <!-- <div class="about_img_container"> -->
+        <img src="img/IMG-9010.jpg" alt="" class="about__img" data-aos="fade-in"/>
+       <!-- </div> -->
 
         <div class="about__data">
           <div class="about__info">
@@ -156,10 +179,10 @@
         <span data-filter=".backend" class="project_item">Backend</span>
       </div>
       <div class="project_parent">
-        <div class="project-card mix frontend">
+        <div class="project-card mix frontend" data-aos="fade-down-left" >
           <div class="mc-item mc-item--slideInUpBig-zoomIn">
             <img src="./img/lystpic.png" alt="err" class="mc-item__image" />
-            <div class="mc-item__caption">
+            <div class="mc-item__caption tech_stack" id="tech_stack">
               <p class="project-description">hello hey check</p>
               <p class="project-tech-stack">Demo 123</p>
             </div>
@@ -176,10 +199,10 @@
             </a>
           </div>
         </div>
-        <div class="project-card mix backend">
+        <div class="project-card mix backend" data-aos="fade-down-right">
           <div class="mc-item mc-item--slideInUpBig-zoomIn">
             <img src="./img/travelpro.png" alt="err" class="mc-item__image" />
-            <div class="mc-item__caption">
+            <div class="mc-item__caption tech_stack" id="tech_stack">
               <p class="project-description">hello hey check</p>
               <p class="project-tech-stack">Demo 123</p>
             </div>
@@ -196,10 +219,10 @@
             </a>
           </div>
         </div>
-        <div class="project-card mix backend">
+        <div class="project-card mix backend"  data-aos="fade-down-left" >
           <div class="mc-item mc-item--zoomOutUp">
             <img src="./img/lystpic.png" alt="err" class="mc-item__image" />
-            <div class="mc-item__caption">
+            <div class="mc-item__caption tech_stack" id="tech_stack">
               <p class="project-description">hello hey check</p>
               <p class="project-tech-stack">Demo 123</p>
             </div>
@@ -216,10 +239,10 @@
             </a>
           </div>
         </div>
-        <div class="project-card mix backend">
+        <div class="project-card mix backend" data-aos="fade-down-right">
           <div class="mc-item mc-item--zoomOutUp">
             <img src="./img/lystpic.png" alt="err" class="mc-item__image" />
-            <div class="mc-item__caption">
+            <div class="mc-item__caption" id="tech_stack">
               <p class="project-description">hello hey check</p>
               <p class="project-tech-stack">Demo 123</p>
             </div>
@@ -333,7 +356,7 @@
 
 
    <section class="github_stats">
-    <h1>Github Stats</h2>
+    <h1>Days I Code</h2>
     <div class="calendar">
       <!-- append calender here -->
     </div>
@@ -440,7 +463,7 @@
               </div> -->
               <form action="" class="real_contact_form">
                 <div class="form_head">Send Your message
-   <img src="https://www.pngall.com/wp-content/uploads/2/Rocket-PNG-File-Download-Free.png" alt="">
+        <img src="https://www.pngall.com/wp-content/uploads/2/Rocket-PNG-File-Download-Free.png" alt="">
 
                 </div>
                 <div>
@@ -470,6 +493,7 @@
     </section>
     
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script
   src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
 ></script>

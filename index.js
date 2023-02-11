@@ -39,3 +39,8 @@ function openNav() {
   GitHubCalendar(".calendar", "priyanshu2014204");
   // or enable responsive functionality
   GitHubCalendar(".calendar", "priyanshu2014204", { responsive: true });
+
+
+  AOS.init();
+
+  
