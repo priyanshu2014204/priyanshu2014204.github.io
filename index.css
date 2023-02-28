@@ -128,7 +128,7 @@ nav {
   background-position: center;
   width: 100%;
   background-size: 70%;
-  height: 60vh; 
+  /* height: 60vh;  */
   position: relative;
   z-index: 100;
 }
@@ -195,6 +195,7 @@ nav {
   border-radius: 4rem;
   padding: 1rem 2.25rem;
   backdrop-filter:blur(10px);
+  z-index: 1000;
   /* background-color: hsla(var(--second-hue), 32%, 16%, 0.8); */
 }
 .nav__list{
@@ -465,7 +466,7 @@ margin-bottom: 2rem;
 
 
 .project_parent{
-  width: 60%;
+  width: 70%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -514,6 +515,27 @@ margin-bottom: 2rem;
   margin-bottom: .75rem;
 }
 
+.card_description{
+  padding-top: .15rem;
+  text-align: left;
+  padding-bottom: .45rem;
+}
+
+.tech_stack{
+  text-align: left;
+  padding-bottom: .25rem;
+}
+
+.tech_stack>span{
+  padding: 0.3rem;
+  border: 1px solid var(--first-color-alt);
+  border-radius: 3px;
+  font-size: 50%;
+}
+
+.tech_stack_sm>span{
+  font-size: 30%;
+}
 
 .about__img:hover{
 filter: blur(0.75px);
@@ -522,6 +544,23 @@ filter: blur(0.75px);
 .active{
   background-color: var(--first-color);
   color: var(--body-color);
+}
+
+.active-link{
+  /* background: linear-gradient(180deg,
+  hsla(var(--first-hue),var(--sat),var(--lig),1),
+  hsla(var(--first-hue),var(--sat),var(--lig),.2)
+  ); */
+  box-shadow: 0 0 16px  hsla(var(--first-hue),var(--sat),var(--lig) );
+  background-color: black;
+}
+
+.nav__link{
+  color: var(--text-color);
+  font-size: 1.25rem;
+  padding: .4rem;
+  display: flex;
+  border-radius: 5rem;
 }
 
 .project_item{
@@ -549,8 +588,8 @@ filter: blur(0.75px);
   
       /* background: linear-gradient(180deg, hsla( var(--first-hue), var(--sat), var(--lig),1), hsla(var(--first-hue),var(--sat),var(--lig),.8) ); */
     box-shadow: 0 0 16px hsla(var(--first-hue),var(--sat),var(--lig),.4);
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+    -webkit-filter: grayscale(0);
+    filter: none;
   padding: .75rem;
   width: 180px;
   height: auto;
@@ -559,8 +598,9 @@ filter: blur(0.75px);
 
 
 .skills-card:hover{
-  -webkit-filter: grayscale(0);
-  filter: none;
+ 
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 .skills-card>img{
@@ -714,7 +754,25 @@ left: 11px;
 }
 
 .coffee_title{
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+
+.mycup{
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+@keyframes move {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: rotateZ(-62deg);
+  }
 }
 
 .contact_me_form{
@@ -846,6 +904,7 @@ label{
 
 .general{
   margin-bottom: 100px;
+  display: none;
 }
 
 .real_contact_form input,.real_contact_form textarea{
@@ -1095,4 +1154,213 @@ rect.ContributionCalendar-day[data-level='1'] {
   border-radius: 1rem;
   border: 5px solid transparent;
   background-clip: content-box;
+}
+
+
+#react_rotate{
+  animation: rotation 10s infinite linear;
+}
+
+@keyframes rotation {
+  from {transform: rotate(0deg);}
+  to   {transform: rotate(359deg);}
+}
+
+
+/* 
+
+.containers_new {
+  background-color: var(--body-color);
+  width: 80%;
+    border-radius: 15px;
+}
+
+.skill {
+  background-color:var(--first-color-alt);
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 20px;
+    border-radius: 15px;
+}
+
+.vscode {
+  width: 100%;
+}
+
+.postman {
+  width: 90%;
+}
+
+.netlify{
+width: 50%;
+}
+
+
+.git{
+  width: 70%;
+}
+
+.github{
+  width: 80%;
+}
+
+.tool_container{
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.test{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.tool_name{
+  width: 80%;
+  text-align: left;
+
+}
+
+section>h1:first-child{
+  text-align: center;
+} */
+
+.github_extra{
+  width: 50%;
+  margin: auto;
+  /* display: flex; */
+  gap: 10px;
+}
+
+.github_extra>div:last-child img{
+  width:23rem;
+  height: 150px;
+}
+
+.github_extra>div:first-child img{
+  width: 100%;
+  height: 23rem;
+}
+
+.github_extra>div:first-child{
+  display: grid;
+  place-items: center;
+}
+
+
+.github_extra>div:last-child {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.calendar
+{
+  margin-bottom: 30px !important;
+}
+
+
+form input,textarea{
+  background-color: black;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 19px;
+  padding: 8px;
+  font-size: 80%;
+  width: 90%;
+  padding-left: 24px;
+  margin-bottom: 2rem;
+}
+textarea{
+  border: 1px solid gray !important;
+}
+
+
+.contactmeform{
+ 
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  margin: auto;
+  padding: 3rem;
+}
+
+.submit_btn{
+  width: 30%;
+  padding-left: 0%;
+}
+
+.submit_btn:hover{
+  background-color: #a834dd;
+}
+
+
+
+.contactmeform>div{
+  width: 50%;
+}
+
+.contactmeform>div:first-child{
+gap: 20px;
+display: grid;
+}
+
+
+.contactmeform>div:last-child{
+margin-top: 1rem;
+}
+
+
+.contactmeform>div:first-child>div{
+  width: 50%;
+  background-color: var(--first-color-alt);
+  padding: 1rem;
+  word-wrap: break-word;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* media query started */
+
+@media screen and (max-width: 480px) {
+ /* .nav__menu{
+    display: block !important;
+ } */
+ #navbar_rightSec{
+  display: none !important;
+ }
+
+ .project_parent{
+  grid-template-columns: repeat(1,1fr);
+  width: 90%;
+ } 
+ .org{
+  display: none;
+ }
+
+ .skills_parent{
+  grid-template-columns: repeat(2,1fr);
+ }
+
+ .skills-card{
+  width: 40%;
+ }
+
+.github_extra>div:last-child{
+  display: block;
+}
+
+
+.github_extra>div:last-child img{
+    width: 100%;
+}
+
 }

@@ -4,7 +4,7 @@
     let setup=document.querySelector(".joke_setup");
     space.innerText="";
     setup.innerText=""
-    let api='https://v2.jokeapi.dev/joke/Any';
+    let api='https://v2.jokeapi.dev/joke/Programming';
    try{
     fetch(api)
     .then((response) => response.json())
@@ -43,4 +43,24 @@ function openNav() {
 
   AOS.init();
 
-  
+  const sections = document.querySelectorAll('section[id]')
+    
+const scrollActive = () =>{
+  	const scrollY = window.pageYOffset
+    console.log(sections)
+	sections.forEach(current =>{
+		const sectionHeight = current.offsetHeight,
+			  sectionTop = current.offsetTop - 58,
+			  sectionId = current.getAttribute('id'),
+			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+
+		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+			sectionsClass.classList.add('active-link')
+		}else{
+			sectionsClass.classList.remove('active-link')
+		}                                                    
+	})
+}
+window.addEventListener('scroll', scrollActive)
+
+
