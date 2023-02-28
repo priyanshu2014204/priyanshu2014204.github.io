@@ -63,4 +63,6 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 
-
+const openresume=()=>{
+  window.open("https://drive.google.com/file/d/17PVQOaDlC_r7wjSjuDj8CDnz_moNaxLe/view?usp=sharing")
+}

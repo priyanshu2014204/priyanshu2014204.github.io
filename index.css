@@ -243,6 +243,9 @@ li{
     background-color: transparent;
     color: white;
     transition: 1s;
+    border: 1px solid;
+    padding: 8px;
+    border-radius: 6px;
 }
 
 #resume-button-1:hover{
@@ -801,7 +804,73 @@ left: 11px;
 }
 
 #contact{
-  padding-bottom: 10rem;
+  padding-bottom: 2rem;
+}
+
+.tool_section{
+  text-align: center;
+  margin-top: 3rem;
+
+}
+
+.tool_section>h1{
+  margin-bottom: 3rem;
+}
+
+.tool_class{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.tool_class>div{
+  width: 150px;
+
+}
+
+/* hover effect */
+
+.github_icon:hover{
+   color: red;
+}
+
+.git_icon:hover{
+  color: #e84d31;
+}
+
+.codepen_icon{
+
+  animation: rotate_codepen 2s linear infinite alternate; 
+}
+
+@keyframes rotate_codepen {
+  0% {
+    transform: translateY(5px); /* start rotation at 0 degrees */
+  }
+  100% {
+    transform: translateY(-5px); /* complete rotation at 360 degrees */
+  }
+}
+
+
+.tool_class i{
+  scale: 4;
+  margin-bottom: 2rem;
+  transition: 1s;
+}
+
+.netlify_icon:hover{
+  color: #1ec1b6;
+}
+
+
+.db_icon:hover{
+  color: #249351;
+}
+
+.tool_class img{
+  width: 100%;
 }
 
 .conatact_align>div:nth-child(1)>div{
@@ -1296,6 +1365,7 @@ textarea{
 .submit_btn{
   width: 30%;
   padding-left: 0%;
+  transition: 2s;
 }
 
 .submit_btn:hover{
@@ -1321,13 +1391,27 @@ margin-top: 1rem;
 
 .contactmeform>div:first-child>div{
   width: 50%;
-  background-color: var(--first-color-alt);
+  background-color: var(--body-color);
   padding: 1rem;
   word-wrap: break-word;
   border-radius: 8px;
   text-align: center;
 }
 
+
+.gmail_icon{
+  color: red;
+}
+
+.linkedin_icon{
+  color: skyblue;
+}
+
+
+.footer{
+  height: 2rem;
+  background-color: #a834dd;
+}
 /* media query started */
 
 @media screen and (max-width: 480px) {
@@ -1362,5 +1446,46 @@ margin-top: 1rem;
 .github_extra>div:last-child img{
     width: 100%;
 }
+
+.contactmeform{
+  display: block;
+}
+.contactmeform>div{
+  width: 100%;
+}
+
+.tool_class i{
+  scale: 2;
+}
+
+.tool_class p{
+  font-size: 40%;
+}
+
+.test_class>p {
+  text-align: center;
+  color: #ccd6f6;
+}
+
+
+
+.test_class>h1:nth-child(2) {
+  font-size: 150%;
+  color: grey;
+  margin: bottom 1rem;
+}
+
+.test_class>p {
+  font-size: 120%;
+  color: #ccd6f6;
+}
+
+.test_class{
+  width: 100% !important;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 
 }

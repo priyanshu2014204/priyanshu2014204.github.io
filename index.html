@@ -72,7 +72,12 @@
         <li class="nav-link home"><a href="#home">Home</a></li>
         <li class="nav-link about"><a href="#about">About</a></li>
         <li class="nav-link skills"><a href="#skills">skills</a></li>
-        <li class="nav-link skills"><a href="#skills">Resume</a></li>
+        <li class="nav-link skills"><a 
+          href="./img/Priyanshu_Resume_26-02-2023-22-02-31.pdf" 
+          download=""
+         target="_blank"
+          onclick="openresume()"
+          >Resume</a></li>
         <li class="nav-link project">
           <a href="#project">Project</a>
         </li>
@@ -92,7 +97,7 @@
           loves to make projects that engage people
         </p>
         <div class="coffee">
-          <a id="resume-button-1" href="https://drive.google.com/file/d/1gaHnQT-dPls5fKxs55_XCxKp1CZZE6aj/view?usp=sharing">Resume</a>
+          <!-- <a id="resume-button-1" href="./img/Priyanshu_Resume_26-02-2023-22-02-31.pdf" download="" onclick="openresume()">Resume</a> -->
           <a href="#contact">Coffee with me</a>
         </div>
       </div>
@@ -173,7 +178,10 @@
             application with a great advanced UI/UX using own API and own
             Database with 2F Authentication
           </p>
+          <!-- <div class="coffee"> -->
+            <a id="resume-button-1" href="./img/Priyanshu_Resume_26-02-2023-22-02-31.pdf" download="" onclick="openresume()">Resume</a>
           <a href="#contact" class="button">Contact Me</a>
+          <!-- </div> -->
         </div>
       </div>
     </section>
@@ -397,6 +405,35 @@
           <p class="skills-card-name"></p>
         </div>
       </div>
+
+     <div class="tool_section">
+      <h1  >Tools I use</h1>
+      <div  class="tool_class">
+        <div>
+          <i class='bx bxl-github github_icon' ></i>
+          <p>Github</p>
+        </div>
+        <div>
+          <i class='bx bxl-codepen codepen_icon'></i>
+          <p>Codepen</p>
+        </div>
+            <div>
+              <i class='bx bxl-git git_icon' ></i>
+              <p>Git</p>
+            </div>
+
+        <div>
+          <i class='bx bxl-netlify netlify_icon' ></i>
+          <p>Netlify</p>
+        </div>
+        <div>
+          <i class='bx bxs-data db_icon' ></i>
+          <p>MongoDB Compass</p>
+        </div>
+
+      </div>
+
+     </div>
     </section>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn">&times;</a>
@@ -426,11 +463,11 @@
 
     <div class="github_extra">
       <div>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=priyanshu2014204" alt="priyanshugithub stats">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=priyanshu2014204&theme=dark" alt="priyanshugithub stats">
       </div>
       <div>
-    <img src="https://github-readme-stats.vercel.app/api?username=priyanshu2014204&show_icons=true&locale=en" alt="">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=priyanshu2014204" alt="">
+    <img src="https://github-readme-stats.vercel.app/api?username=priyanshu2014204&show_icons=true&locale=en&theme=dark" alt="">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=priyanshu2014204&theme=dark" alt="">
   </div>
     </div>
      
@@ -515,11 +552,11 @@
               <p>+91 9971542816</p>
             </div>
             <div>
-              <i class='bx bxl-gmail' ></i>
+              <i class='bx bxl-gmail gmail_icon' ></i>
               <p>priyanshu2014204@gmail.com</p>
             </div>
             <div>
-              <i class='bx bxl-linkedin' ></i>
+              <i class='bx bxl-linkedin linkedin_icon' ></i>
               <p>priyanshu</p>
             </div>
         </div>
@@ -527,13 +564,20 @@
               <form action="">
                  <input type="text" placeholder="Your name">
                  <input type="text" placeholder="Your email">
-                 <textarea name="" id="" cols="30" rows="5"></textarea>
+                 <textarea name="" id="" cols="30" rows="5"
+                  placeholder="Desc more about your project ..."
+                 ></textarea>
                  <input type="submit" class="submit_btn" value="Send">
               </form>
         </div>
+       
       </div>
+      
      
     </section>
+    <div class="footer">
+  
+  </div>
     
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
