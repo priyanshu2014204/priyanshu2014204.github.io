@@ -536,9 +536,9 @@ margin-bottom: 2rem;
   font-size: 50%;
 }
 
-.tech_stack_sm>span{
+/* .tech_stack_sm>span{
   font-size: 30%;
-}
+} */
 
 .about__img:hover{
 filter: blur(0.75px);
@@ -561,9 +561,11 @@ filter: blur(0.75px);
 .nav__link{
   color: var(--text-color);
   font-size: 1.25rem;
-  padding: .4rem;
+  padding: 0.4rem;
   display: flex;
   border-radius: 5rem;
+  align-items: center;
+  gap: 4px;
 }
 
 .project_item{
@@ -1105,6 +1107,11 @@ textarea{
   transform: rotate(180deg);
 }
 
+
+.github_link_promo>a:last-child{
+ color: #000;
+}
+
 /* .slide_one>div p{
   color: black;
 } */
@@ -1166,10 +1173,13 @@ textarea{
   margin-left: 50px;
 }
 
+
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
 
 
 
@@ -1352,6 +1362,26 @@ textarea{
   border: 1px solid gray !important;
 }
 
+
+.github_link_promo i{
+  scale: 2;
+}
+
+.github_link_promo>div{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+.gmail_promo p{
+  font-size: 60%;
+}
+
+.contactmeform>div>div{
+  display: flex;
+  flex-direction: column;
+ justify-content: space-around;
+}
 
 .contactmeform{
  
